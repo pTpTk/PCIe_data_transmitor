@@ -10,3 +10,4 @@
 ## References
 * DMA/Bridge Subsystem for PCI Express v4.1 Product Guide https://docs.xilinx.com/r/en-US/pg195-pcie-dma/IP-Facts
 * AXI Reference Guide https://docs.xilinx.com/v/u/en-US/ug1037-vivado-axi-reference-guide
+* AXI Tutorial https://github.com/absolutezero2730/AXI_DMA_FIFO
