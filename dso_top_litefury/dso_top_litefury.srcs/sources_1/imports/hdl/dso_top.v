@@ -22,7 +22,9 @@ module dso_top
     output [3:0] pcie_mgt_txn,
     output [3:0] pcie_mgt_txp,
     input pcie_perstn,
-    input ref_clk
+    input ref_clk,
+    input adc_ctl_in,
+    output adc_ctl_out
     );
   
   wire S01_ARESETN;
@@ -52,9 +54,38 @@ module dso_top
   wire adc_clk;
   
   wire sys_clk;
+  
+  wire fifo_empty;
+  
+  data_generator data_generator (
+    .clk_ref(sys_clk),
+    .reset(S01_ARESETN),
+    .data_out(adc_data),
+    .clk(adc_clk)
+  );
+  
+  adc_ctl adc_ctl (
+    .adc_clk(adc_clk),
+    .reset(S01_ARESETN),
 
-  adc_to_datamover adc_to_datamover (
-    .start(1),
+    .adc_ctl_in(adc_ctl_in),
+    .vsync_count(vsync_count),
+    .hsync_count(hsync_count),
+    .adc_ctl_out(adc_ctl_out)
+  );
+  
+  fifo_generator_0 adc_fifo (
+    .rst(~S01_ARESETN | s2mm_halt),
+    .din(adc_data),
+    .dout(fifo_data),
+    .wr_clk(adc_clk),
+    .rd_clk(axi_aclk),
+    .rd_en(fifo_rd_en),
+    .wr_en(adc_ctl_out),
+    .empty(fifo_empty)
+  );
+
+  datamover_ctl datamover_ctl (
     .axi_aclk(axi_aclk),
     .axi_aresetn(axi_aresetn),
     .S01_ARESETN(S01_ARESETN),
@@ -70,19 +101,9 @@ module dso_top
     .s2mm_wr_xfer_cmplt(s2mm_wr_xfer_cmplt),
     .gpio_io_o_0(gpio_io_o_0),
     .gpio2_io_i(gpio2_io_i),
-    .adc_data(adc_data),
-    .adc_clk(adc_clk),
-    .vsync_count(vsync_count),
-    .hsync_count(hsync_count)
+    .fifo_empty(fifo_empty)
   );
   
-  data_generator data_generator (
-    .clk_ref(sys_clk),
-    .reset(S01_ARESETN),
-    .data_out(adc_data),
-    .clk(adc_clk)
-  );
-
   design_1 design_1_i
    (
     .DDR3_addr(DDR3_addr),
