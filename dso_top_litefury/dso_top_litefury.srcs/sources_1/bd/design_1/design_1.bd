@@ -1,13 +1,13 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xD087568B33E54360",
+      "boundary_crc": "0xD087568B207F9B2A",
       "device": "xc7a100tfgg484-2",
       "gen_directory": "../../../../dso_top_litefury.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2021.2",
+      "tool_version": "2022.1",
       "validated": "true"
     },
     "design_tree": {
@@ -138,7 +138,7 @@
             "value": "undef"
           },
           "PHASE": {
-            "value": "0.000",
+            "value": "0.0",
             "value_src": "default"
           },
           "TDATA_NUM_BYTES": {
@@ -183,7 +183,7 @@
             "value": "undef"
           },
           "PHASE": {
-            "value": "0.000",
+            "value": "0.0",
             "value_src": "default"
           },
           "TDATA_NUM_BYTES": {
@@ -270,7 +270,7 @@
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "default_prop"
+            "value_src": "default"
           }
         }
       },
@@ -1808,6 +1808,9 @@
               "plltype": {
                 "value": "QPLL1"
               },
+              "runbit_fix": {
+                "value": "false"
+              },
               "xdma_pcie_64bit_en": {
                 "value": "true"
               },
@@ -1899,8 +1902,8 @@
           "util_ds_buf_0_IBUF_OUT": {
             "ports": [
               "util_ds_buf_0/IBUF_OUT",
-              "xdma_0/sys_clk",
-              "sys_clk"
+              "sys_clk",
+              "xdma_0/sys_clk"
             ]
           },
           "xdma_0_axi_aclk": {
@@ -3222,6 +3225,11 @@
               "SEG_axi_gpio_0_Reg": {
                 "address_block": "/AXI_LITE_IO/axi_gpio_0/S_AXI/Reg",
                 "offset": "0x40000000",
+                "range": "64K"
+              },
+              "SEG_axi_gpio_1_Reg": {
+                "address_block": "/AXI_LITE_IO/axi_gpio_1/S_AXI/Reg",
+                "offset": "0x40010000",
                 "range": "64K"
               }
             }

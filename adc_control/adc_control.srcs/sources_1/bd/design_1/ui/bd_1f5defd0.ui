@@ -1,0 +1,45 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.20988",
+   "Default View_TopLeft":"845,0",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port pcie -pg 1 -lvl 0 -x -230 -y 640 -defaultsOSRD
+preplace port pcie_mgt -pg 1 -lvl 3 -x 1660 -y 370 -defaultsOSRD
+preplace port S_AXIS_S2MM_CMD -pg 1 -lvl 0 -x -230 -y 140 -defaultsOSRD
+preplace port S_AXIS_S2MM -pg 1 -lvl 0 -x -230 -y 160 -defaultsOSRD
+preplace port port-id_pcie_perstn -pg 1 -lvl 0 -x -230 -y 660 -defaultsOSRD
+preplace port port-id_s2mm_err -pg 1 -lvl 3 -x 1660 -y 160 -defaultsOSRD
+preplace port port-id_s2mm_wr_xfer_cmplt -pg 1 -lvl 3 -x 1660 -y 180 -defaultsOSRD
+preplace port port-id_axi_aresetn -pg 1 -lvl 3 -x 1660 -y 220 -defaultsOSRD
+preplace port port-id_S01_ARESETN -pg 1 -lvl 0 -x -230 -y 202 -defaultsOSRD
+preplace port port-id_s2mm_halt -pg 1 -lvl 0 -x -230 -y 230 -defaultsOSRD
+preplace port port-id_axi_aclk -pg 1 -lvl 3 -x 1660 -y 200 -defaultsOSRD
+preplace portBus gpio2_io_i -pg 1 -lvl 0 -x -230 -y 80 -defaultsOSRD
+preplace portBus gpio_io_o_0 -pg 1 -lvl 3 -x 1660 -y 70 -defaultsOSRD
+preplace portBus vsync_count -pg 1 -lvl 3 -x 1660 -y 90 -defaultsOSRD
+preplace portBus hsync_count -pg 1 -lvl 3 -x 1660 -y 110 -defaultsOSRD
+preplace portBus sys_clk -pg 1 -lvl 3 -x 1660 -y 690 -defaultsOSRD
+preplace inst PCIe -pg 1 -lvl 1 -x 130 -y 650 -defaultsOSRD
+preplace inst AXI_LITE_IO -pg 1 -lvl 2 -x 1467 -y 90 -defaultsOSRD
+preplace netloc AXI_LITE_IO_gpio_io_o_0 1 2 1 NJ 70
+preplace netloc AXI_LITE_IO_hsync_count 1 2 1 N 110
+preplace netloc AXI_LITE_IO_vsync_count 1 2 1 N 90
+preplace netloc PCIe_axi_aresetn 1 1 2 280 220 NJ
+preplace netloc PCIe_sys_clk 1 1 2 270 690 NJ
+preplace netloc gpio2_io_i_0_1 1 0 2 NJ 80 NJ
+preplace netloc sys_rst_n_0_1 1 0 1 NJ 660
+preplace netloc xdma_0_axi_aclk 1 1 2 260 200 NJ
+preplace netloc CLK_IN_D_0_1 1 0 1 NJ 640
+preplace netloc PCIe_M_AXI_LITE 1 1 1 250 60n
+preplace netloc xdma_0_pcie_mgt 1 1 2 270J 370 NJ
+levelinfo -pg 1 -230 130 1467 1660
+pagesize -pg 1 -db -bbox -sgen -420 -100 1850 890
+"
+}
+{
+   "da_axi4_cnt":"10",
+   "da_board_cnt":"2",
+   "da_clkrst_cnt":"6"
+}

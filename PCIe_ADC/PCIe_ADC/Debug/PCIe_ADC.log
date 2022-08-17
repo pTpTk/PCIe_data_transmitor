@@ -1,0 +1,42 @@
+﻿  main.cpp
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(23,35): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(23,13): error C2065: 'GUID_DEVINTERFACE_XDMA': undeclared identifier
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(23,12): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(23,12): message : The initializer contains too many elements
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(70,9): error C3646: 'clockCycleCount': unknown override specifier
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(70,24): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(71,9): error C3646: 'dataCycleCount': unknown override specifier
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(71,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(72,9): error C3646: 'pendingCount': unknown override specifier
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(72,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(98,9): error C3646: 'ptrAddr': unknown override specifier
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(98,16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(99,8): error C3646: 'size': unknown override specifier
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(99,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(100,8): error C3646: 'offset': unknown override specifier
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(100,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(105,8): error C3646: 'mappedAddress': unknown override specifier
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(105,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(106,8): error C3646: 'barLength': unknown override specifier
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\xdma_public.h(106,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\main.cpp(8,48): error C2065: 'GUID_DEVINTERFACE_XDMA': undeclared identifier
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\main.cpp(8,16): error C2737: 'device_paths': const object must be initialized
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\main.cpp(9,8): error C3536: 'device_paths': cannot be used before it is initialized
+  api.cpp
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(184,20): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'int64_t'
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(184,20): message : consider using '%lld' in the format string
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(184,20): message : consider using '%I64d' in the format string
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(184,20): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'int64_t'
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(184,20): message : consider using '%lld' in the format string
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(184,20): message : consider using '%I64d' in the format string
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(193,58): error C2660: 'check': function does not take 2 arguments
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.h(47,10): message : see declaration of 'check'
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(203,31): warning C4244: '+=': conversion from 'int64_t' to 'size_t', possible loss of data
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(277,20): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'int64_t'
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(277,20): message : consider using '%lld' in the format string
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(277,20): message : consider using '%I64d' in the format string
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(277,20): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'int64_t'
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(277,20): message : consider using '%lld' in the format string
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(277,20): message : consider using '%I64d' in the format string
+C:\Users\AnotherWorkstation\Documents\LiteFury\PCIe_ADC\PCIe_ADC\api.cpp(294,31): warning C4244: '+=': conversion from 'int64_t' to 'size_t', possible loss of data
+  Generating Code...

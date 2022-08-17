@@ -1,0 +1,10 @@
+set_property PACKAGE_PIN H5 [get_ports adc_ctl_in]
+set_property IOSTANDARD LVCMOS33 [get_ports adc_ctl_in]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets adc_ctl_in_IBUF]
+set_property PACKAGE_PIN J5 [get_ports adc_ctl_out]
+set_property IOSTANDARD LVCMOS33 [get_ports adc_ctl_out]
+set_property PACKAGE_PIN K2 [get_ports hsync_is_zero]
+set_property IOSTANDARD LVCMOS33 [get_ports hsync_is_zero]
+
+set_property PACKAGE_PIN F6 [get_ports clk_p]
+set_property PACKAGE_PIN E6 [get_ports clk_n]

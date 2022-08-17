@@ -37,6 +37,9 @@ set_property PACKAGE_PIN E6 [get_ports {pcie_clk_n[0]}]
 # PCIe PERSTn
 set_property -dict {PACKAGE_PIN J1 IOSTANDARD LVCMOS33} [get_ports pcie_perstn]
 
-# data generator clcok
-#set_property PACKAGE_PIN V22 [get_ports ref_clk]
-#set_property IOSTANDARD LVCMOS33 [get_ports ref_clk]
+# adc control IO
+set_property PACKAGE_PIN H5 [get_ports adc_ctl_in]
+set_property IOSTANDARD LVCMOS33 [get_ports adc_ctl_in]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets adc_ctl_in_IBUF]
+set_property PACKAGE_PIN J5 [get_ports adc_ctl_out]
+set_property IOSTANDARD LVCMOS33 [get_ports adc_ctl_out]

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Aug  5 13:04:45 2022" VIVADOVERSION="2021.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Aug 11 12:36:45 2022" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="design_1" PACKAGE="fgg484" SPEEDGRADE="-2"/>
 
@@ -50,19 +50,29 @@
         <CONNECTION INSTANCE="AXI_LITE_IO_axi_gpio_0" PORT="gpio_io_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="71" NAME="S_AXIS_S2MM_CMD_tdata" RIGHT="0" SIGIS="undef" SIGNAME="Datamover_axi_datamover_0_s_axis_s2mm_cmd_tdata">
+    <PORT DIR="O" LEFT="31" NAME="vsync_count" RIGHT="0" SIGIS="undef" SIGNAME="AXI_LITE_IO_axi_gpio_1_gpio_io_o">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Datamover_axi_datamover_0" PORT="s_axis_s2mm_cmd_tdata"/>
+        <CONNECTION INSTANCE="AXI_LITE_IO_axi_gpio_1" PORT="gpio_io_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="S_AXIS_S2MM_CMD_tready" SIGIS="undef" SIGNAME="Datamover_axi_datamover_0_s_axis_s2mm_cmd_tready">
+    <PORT DIR="O" LEFT="31" NAME="hsync_count" RIGHT="0" SIGIS="undef" SIGNAME="AXI_LITE_IO_axi_gpio_1_gpio2_io_o">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Datamover_axi_datamover_0" PORT="s_axis_s2mm_cmd_tready"/>
+        <CONNECTION INSTANCE="AXI_LITE_IO_axi_gpio_1" PORT="gpio2_io_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="S_AXIS_S2MM_CMD_tvalid" SIGIS="undef" SIGNAME="Datamover_axi_datamover_0_s_axis_s2mm_cmd_tvalid">
+    <PORT DIR="O" LEFT="0" NAME="sys_clk" RIGHT="0" SIGIS="undef" SIGNAME="PCIe_util_ds_buf_0_IBUF_OUT">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Datamover_axi_datamover_0" PORT="s_axis_s2mm_cmd_tvalid"/>
+        <CONNECTION INSTANCE="PCIe_util_ds_buf_0" PORT="IBUF_OUT"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="pcie_clk_p" RIGHT="0" SIGIS="clk" SIGNAME="PCIe_util_ds_buf_0_IBUF_DS_P">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PCIe_util_ds_buf_0" PORT="IBUF_DS_P"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="pcie_clk_n" RIGHT="0" SIGIS="clk" SIGNAME="PCIe_util_ds_buf_0_IBUF_DS_N">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PCIe_util_ds_buf_0" PORT="IBUF_DS_N"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="127" NAME="S_AXIS_S2MM_tdata" RIGHT="0" SIGIS="undef" SIGNAME="Datamover_axi_datamover_0_s_axis_s2mm_tdata">
@@ -90,34 +100,19 @@
         <CONNECTION INSTANCE="Datamover_axi_datamover_0" PORT="s_axis_s2mm_tvalid"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="3" NAME="pcie_mgt_rxn" RIGHT="0" SIGIS="undef" SIGNAME="PCIe_xdma_0_pci_exp_rxn">
+    <PORT DIR="I" LEFT="71" NAME="S_AXIS_S2MM_CMD_tdata" RIGHT="0" SIGIS="undef" SIGNAME="Datamover_axi_datamover_0_s_axis_s2mm_cmd_tdata">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="PCIe_xdma_0" PORT="pci_exp_rxn"/>
+        <CONNECTION INSTANCE="Datamover_axi_datamover_0" PORT="s_axis_s2mm_cmd_tdata"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="3" NAME="pcie_mgt_rxp" RIGHT="0" SIGIS="undef" SIGNAME="PCIe_xdma_0_pci_exp_rxp">
+    <PORT DIR="O" NAME="S_AXIS_S2MM_CMD_tready" SIGIS="undef" SIGNAME="Datamover_axi_datamover_0_s_axis_s2mm_cmd_tready">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="PCIe_xdma_0" PORT="pci_exp_rxp"/>
+        <CONNECTION INSTANCE="Datamover_axi_datamover_0" PORT="s_axis_s2mm_cmd_tready"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="pcie_mgt_txn" RIGHT="0" SIGIS="undef" SIGNAME="PCIe_xdma_0_pci_exp_txn">
+    <PORT DIR="I" NAME="S_AXIS_S2MM_CMD_tvalid" SIGIS="undef" SIGNAME="Datamover_axi_datamover_0_s_axis_s2mm_cmd_tvalid">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="PCIe_xdma_0" PORT="pci_exp_txn"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="pcie_mgt_txp" RIGHT="0" SIGIS="undef" SIGNAME="PCIe_xdma_0_pci_exp_txp">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="PCIe_xdma_0" PORT="pci_exp_txp"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="pcie_clk_p" RIGHT="0" SIGIS="clk" SIGNAME="PCIe_util_ds_buf_0_IBUF_DS_P">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="PCIe_util_ds_buf_0" PORT="IBUF_DS_P"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="pcie_clk_n" RIGHT="0" SIGIS="clk" SIGNAME="PCIe_util_ds_buf_0_IBUF_DS_N">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="PCIe_util_ds_buf_0" PORT="IBUF_DS_N"/>
+        <CONNECTION INSTANCE="Datamover_axi_datamover_0" PORT="s_axis_s2mm_cmd_tvalid"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" LEFT="15" NAME="DDR3_dq" RIGHT="0" SIGIS="undef" SIGNAME="Memory_mig_7series_0_ddr3_dq">
@@ -190,19 +185,24 @@
         <CONNECTION INSTANCE="Memory_mig_7series_0" PORT="ddr3_odt"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="vsync_count" RIGHT="0" SIGIS="undef" SIGNAME="AXI_LITE_IO_axi_gpio_1_gpio_io_o">
+    <PORT DIR="I" LEFT="3" NAME="pcie_mgt_rxn" RIGHT="0" SIGIS="undef" SIGNAME="PCIe_xdma_0_pci_exp_rxn">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="AXI_LITE_IO_axi_gpio_1" PORT="gpio_io_o"/>
+        <CONNECTION INSTANCE="PCIe_xdma_0" PORT="pci_exp_rxn"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="hsync_count" RIGHT="0" SIGIS="undef" SIGNAME="AXI_LITE_IO_axi_gpio_1_gpio2_io_o">
+    <PORT DIR="I" LEFT="3" NAME="pcie_mgt_rxp" RIGHT="0" SIGIS="undef" SIGNAME="PCIe_xdma_0_pci_exp_rxp">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="AXI_LITE_IO_axi_gpio_1" PORT="gpio2_io_o"/>
+        <CONNECTION INSTANCE="PCIe_xdma_0" PORT="pci_exp_rxp"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="sys_clk" RIGHT="0" SIGIS="undef" SIGNAME="PCIe_util_ds_buf_0_IBUF_OUT">
+    <PORT DIR="O" LEFT="3" NAME="pcie_mgt_txn" RIGHT="0" SIGIS="undef" SIGNAME="PCIe_xdma_0_pci_exp_txn">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="PCIe_util_ds_buf_0" PORT="IBUF_OUT"/>
+        <CONNECTION INSTANCE="PCIe_xdma_0" PORT="pci_exp_txn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="pcie_mgt_txp" RIGHT="0" SIGIS="undef" SIGNAME="PCIe_xdma_0_pci_exp_txp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PCIe_xdma_0" PORT="pci_exp_txp"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -266,7 +266,7 @@
       <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
       <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
       <PARAMETER NAME="FREQ_HZ" VALUE="125000000"/>
-      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="PHASE" VALUE="0.0"/>
       <PARAMETER NAME="CLK_DOMAIN"/>
       <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
       <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
@@ -286,7 +286,7 @@
       <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
       <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
       <PARAMETER NAME="FREQ_HZ" VALUE="125000000"/>
-      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="PHASE" VALUE="0.0"/>
       <PARAMETER NAME="CLK_DOMAIN"/>
       <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
       <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
@@ -301,7 +301,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="26" FULLNAME="/AXI_LITE_IO/axi_crossbar_0" HWVERSION="2.1" INSTANCE="AXI_LITE_IO_axi_crossbar_0" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_crossbar" VLNV="xilinx.com:ip:axi_crossbar:2.1">
+    <MODULE COREREVISION="27" FULLNAME="/AXI_LITE_IO/axi_crossbar_0" HWVERSION="2.1" INSTANCE="AXI_LITE_IO_axi_crossbar_0" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_crossbar" VLNV="xilinx.com:ip:axi_crossbar:2.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
       </DOCUMENTS>
@@ -314,8 +314,8 @@
         <PARAMETER NAME="C_AXI_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_AXI_PROTOCOL" VALUE="2"/>
         <PARAMETER NAME="C_NUM_ADDR_RANGES" VALUE="1"/>
-        <PARAMETER NAME="C_M_AXI_BASE_ADDR" VALUE="0x0000000040000000ffffffffffffffff"/>
-        <PARAMETER NAME="C_M_AXI_ADDR_WIDTH" VALUE="0x0000001000000000"/>
+        <PARAMETER NAME="C_M_AXI_BASE_ADDR" VALUE="0x00000000400000000000000040010000"/>
+        <PARAMETER NAME="C_M_AXI_ADDR_WIDTH" VALUE="0x0000001000000010"/>
         <PARAMETER NAME="C_S_AXI_BASE_ID" VALUE="0x00000000"/>
         <PARAMETER NAME="C_S_AXI_THREAD_ID_WIDTH" VALUE="0x00000000"/>
         <PARAMETER NAME="C_AXI_SUPPORTS_USER_SIGNALS" VALUE="0"/>
@@ -324,8 +324,8 @@
         <PARAMETER NAME="C_AXI_WUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_AXI_RUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_AXI_BUSER_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_M_AXI_WRITE_CONNECTIVITY" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="C_M_AXI_READ_CONNECTIVITY" VALUE="0xFFFFFFFFFFFFFFFF"/>
+        <PARAMETER NAME="C_M_AXI_WRITE_CONNECTIVITY" VALUE="0x0000000100000001"/>
+        <PARAMETER NAME="C_M_AXI_READ_CONNECTIVITY" VALUE="0x0000000100000001"/>
         <PARAMETER NAME="C_R_REGISTER" VALUE="0"/>
         <PARAMETER NAME="C_S_AXI_SINGLE_THREAD" VALUE="0x00000001"/>
         <PARAMETER NAME="C_S_AXI_WRITE_ACCEPTANCE" VALUE="0x00000001"/>
@@ -333,7 +333,7 @@
         <PARAMETER NAME="C_M_AXI_WRITE_ISSUING" VALUE="0x0000000100000001"/>
         <PARAMETER NAME="C_M_AXI_READ_ISSUING" VALUE="0x0000000100000001"/>
         <PARAMETER NAME="C_S_AXI_ARB_PRIORITY" VALUE="0x00000000"/>
-        <PARAMETER NAME="C_M_AXI_SECURE" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_M_AXI_SECURE" VALUE="0x0000000000000000"/>
         <PARAMETER NAME="C_CONNECTIVITY_MODE" VALUE="0"/>
         <PARAMETER NAME="ADDR_RANGES" VALUE="1"/>
         <PARAMETER NAME="NUM_SI" VALUE="1"/>
@@ -1022,7 +1022,7 @@
         <PARAMETER NAME="S13_BASE_ID" VALUE="0x0000000d"/>
         <PARAMETER NAME="S14_BASE_ID" VALUE="0x0000000e"/>
         <PARAMETER NAME="S15_BASE_ID" VALUE="0x0000000f"/>
-        <PARAMETER NAME="M00_A00_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M00_A00_BASE_ADDR" VALUE="0x0000000040010000"/>
         <PARAMETER NAME="M00_A01_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M00_A02_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M00_A03_BASE_ADDR" VALUE="0xffffffffffffffff"/>
@@ -1278,7 +1278,7 @@
         <PARAMETER NAME="M15_A13_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M15_A14_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M15_A15_BASE_ADDR" VALUE="0xffffffffffffffff"/>
-        <PARAMETER NAME="M00_A00_ADDR_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M00_A00_ADDR_WIDTH" VALUE="16"/>
         <PARAMETER NAME="M00_A01_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M00_A02_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M00_A03_ADDR_WIDTH" VALUE="0"/>
@@ -1947,7 +1947,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="27" FULLNAME="/AXI_LITE_IO/axi_gpio_0" HWVERSION="2.0" INSTANCE="AXI_LITE_IO_axi_gpio_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio" VLNV="xilinx.com:ip:axi_gpio:2.0">
+    <MODULE COREREVISION="28" FULLNAME="/AXI_LITE_IO/axi_gpio_0" HWVERSION="2.0" INSTANCE="AXI_LITE_IO_axi_gpio_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio" VLNV="xilinx.com:ip:axi_gpio:2.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_gpio;v=v2_0;d=pg144-axi-gpio.pdf"/>
       </DOCUMENTS>
@@ -2147,7 +2147,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="27" FULLNAME="/AXI_LITE_IO/axi_gpio_1" HWVERSION="2.0" INSTANCE="AXI_LITE_IO_axi_gpio_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio" VLNV="xilinx.com:ip:axi_gpio:2.0">
+    <MODULE COREREVISION="28" FULLNAME="/AXI_LITE_IO/axi_gpio_1" HWVERSION="2.0" INSTANCE="AXI_LITE_IO_axi_gpio_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio" VLNV="xilinx.com:ip:axi_gpio:2.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_gpio;v=v2_0;d=pg144-axi-gpio.pdf"/>
       </DOCUMENTS>
@@ -2172,6 +2172,8 @@
         <PARAMETER NAME="GPIO_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="GPIO2_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0x40010000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x4001FFFF"/>
       </PARAMETERS>
       <PORTS>
         <PORT CLKFREQUENCY="125000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="PCIe_xdma_0_axi_aclk">
@@ -2345,7 +2347,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="27" FULLNAME="/Datamover/axi_datamover_0" HWVERSION="5.1" INSTANCE="Datamover_axi_datamover_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_datamover" VLNV="xilinx.com:ip:axi_datamover:5.1">
+    <MODULE COREREVISION="28" FULLNAME="/Datamover/axi_datamover_0" HWVERSION="5.1" INSTANCE="Datamover_axi_datamover_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_datamover" VLNV="xilinx.com:ip:axi_datamover:5.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_datamover;v=v5_1;d=pg022_axi_datamover.pdf"/>
       </DOCUMENTS>
@@ -2747,14 +2749,14 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="24" FULLNAME="/Memory/axi_clock_converter_0" HWVERSION="2.1" INSTANCE="Memory_axi_clock_converter_0" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_clock_converter" VLNV="xilinx.com:ip:axi_clock_converter:2.1">
+    <MODULE COREREVISION="25" FULLNAME="/Memory/axi_clock_converter_0" HWVERSION="2.1" INSTANCE="Memory_axi_clock_converter_0" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_clock_converter" VLNV="xilinx.com:ip:axi_clock_converter:2.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
         <PARAMETER NAME="C_AXI_ID_WIDTH" VALUE="3"/>
-        <PARAMETER NAME="C_AXI_ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_AXI_ADDR_WIDTH" VALUE="29"/>
         <PARAMETER NAME="C_AXI_DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="C_S_AXI_ACLK_RATIO" VALUE="1"/>
         <PARAMETER NAME="C_M_AXI_ACLK_RATIO" VALUE="2"/>
@@ -2771,7 +2773,7 @@
         <PARAMETER NAME="C_SYNCHRONIZER_STAGE" VALUE="3"/>
         <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
-        <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="ADDR_WIDTH" VALUE="29"/>
         <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="AWUSER_WIDTH" VALUE="4"/>
@@ -2801,7 +2803,7 @@
             <CONNECTION INSTANCE="Memory_axi_crossbar_0" PORT="m_axi_awid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Memory_axi_clock_converter_0_s_axi_awaddr">
+        <PORT DIR="I" LEFT="28" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Memory_axi_clock_converter_0_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Memory_axi_crossbar_0" PORT="m_axi_awaddr"/>
           </CONNECTIONS>
@@ -2911,7 +2913,7 @@
             <CONNECTION INSTANCE="Memory_axi_crossbar_0" PORT="m_axi_arid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Memory_axi_clock_converter_0_s_axi_araddr">
+        <PORT DIR="I" LEFT="28" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Memory_axi_clock_converter_0_s_axi_araddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Memory_axi_crossbar_0" PORT="m_axi_araddr"/>
           </CONNECTIONS>
@@ -3011,7 +3013,7 @@
             <CONNECTION INSTANCE="Memory_mig_7series_0" PORT="s_axi_awid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="m_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Memory_axi_clock_converter_0_m_axi_awaddr">
+        <PORT DIR="O" LEFT="28" NAME="m_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Memory_axi_clock_converter_0_m_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Memory_mig_7series_0" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
@@ -3113,7 +3115,7 @@
             <CONNECTION INSTANCE="Memory_mig_7series_0" PORT="s_axi_arid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="m_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Memory_axi_clock_converter_0_m_axi_araddr">
+        <PORT DIR="O" LEFT="28" NAME="m_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Memory_axi_clock_converter_0_m_axi_araddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Memory_mig_7series_0" PORT="s_axi_araddr"/>
           </CONNECTIONS>
@@ -3201,7 +3203,7 @@
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="125000000"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="3"/>
-          <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="29"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="4"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
@@ -3276,7 +3278,7 @@
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="3"/>
-          <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="29"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="4"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
@@ -3348,7 +3350,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="26" FULLNAME="/Memory/axi_crossbar_0" HWVERSION="2.1" INSTANCE="Memory_axi_crossbar_0" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_crossbar" VLNV="xilinx.com:ip:axi_crossbar:2.1">
+    <MODULE COREREVISION="27" FULLNAME="/Memory/axi_crossbar_0" HWVERSION="2.1" INSTANCE="Memory_axi_crossbar_0" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_crossbar" VLNV="xilinx.com:ip:axi_crossbar:2.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
       </DOCUMENTS>
@@ -5250,7 +5252,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="9" FULLNAME="/Memory/clk_wiz_0" HWVERSION="6.0" INSTANCE="Memory_clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:6.0">
+    <MODULE COREREVISION="10" FULLNAME="/Memory/clk_wiz_0" HWVERSION="6.0" INSTANCE="Memory_clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:6.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v6_0;d=pg065-clk-wiz.pdf"/>
       </DOCUMENTS>
@@ -7406,7 +7408,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/Memory/util_vector_logic_0" HWVERSION="2.0" INSTANCE="Memory_util_vector_logic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+    <MODULE COREREVISION="2" FULLNAME="/Memory/util_vector_logic_0" HWVERSION="2.0" INSTANCE="Memory_util_vector_logic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_OPERATION" VALUE="not"/>
@@ -7494,8 +7496,8 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="PCIe_util_ds_buf_0_IBUF_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="PCIe_xdma_0" PORT="sys_clk"/>
             <CONNECTION INSTANCE="External_Ports" PORT="sys_clk"/>
+            <CONNECTION INSTANCE="PCIe_xdma_0" PORT="sys_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IBUF_DS_ODIV2" RIGHT="0" SIGIS="clk"/>
@@ -7511,7 +7513,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="14" FULLNAME="/PCIe/xdma_0" HWVERSION="4.1" INSTANCE="PCIe_xdma_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xdma" VLNV="xilinx.com:ip:xdma:4.1">
+    <MODULE COREREVISION="17" FULLNAME="/PCIe/xdma_0" HWVERSION="4.1" INSTANCE="PCIe_xdma_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xdma" VLNV="xilinx.com:ip:xdma:4.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=xdma;v=v4_1;d=pg195-pcie-dma.pdf"/>
       </DOCUMENTS>
@@ -7597,6 +7599,7 @@
         <PARAMETER NAME="XDMA_NUM_USR_IRQ" VALUE="1"/>
         <PARAMETER NAME="XDMA_RNUM_RIDS" VALUE="2"/>
         <PARAMETER NAME="XDMA_WNUM_RIDS" VALUE="8"/>
+        <PARAMETER NAME="EGW_IS_PARENT_IP" VALUE="1"/>
         <PARAMETER NAME="C_M_AXI_ID_WIDTH" VALUE="2"/>
         <PARAMETER NAME="C_AXIBAR_NUM" VALUE="1"/>
         <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
@@ -7827,6 +7830,8 @@
         <PARAMETER NAME="SHELL_BRIDGE" VALUE="0"/>
         <PARAMETER NAME="MSIX_PCIE_INTERNAL" VALUE="0"/>
         <PARAMETER NAME="VERSAL_PART_TYPE" VALUE="S80"/>
+        <PARAMETER NAME="TANDEM_RFSOC" VALUE="FALSE"/>
+        <PARAMETER NAME="ERRC_DEC_EN" VALUE="FALSE"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_xdma_0_0"/>
         <PARAMETER NAME="functional_mode" VALUE="DMA"/>
         <PARAMETER NAME="mode_selection" VALUE="Advanced"/>
@@ -8739,7 +8744,7 @@
         <PARAMETER NAME="usrint_expn" VALUE="false"/>
         <PARAMETER NAME="shell_bridge" VALUE="false"/>
         <PARAMETER NAME="msix_pcie_internal" VALUE="false"/>
-        <PARAMETER NAME="broadcom_sbr_wa" VALUE="false"/>
+        <PARAMETER NAME="warm_reboot_sbr_fix" VALUE="false"/>
         <PARAMETER NAME="tl_tx_mux_strict_priority" VALUE="false"/>
         <PARAMETER NAME="en_slot_cap_reg" VALUE="false"/>
         <PARAMETER NAME="slot_cap_reg" VALUE="00000040"/>
@@ -8758,6 +8763,8 @@
         <PARAMETER NAME="insert_cips" VALUE="false"/>
         <PARAMETER NAME="en_bridge_slv" VALUE="false"/>
         <PARAMETER NAME="enable_clock_delay_grp" VALUE="true"/>
+        <PARAMETER NAME="replace_uram_with_bram" VALUE="false"/>
+        <PARAMETER NAME="errc_dec_en" VALUE="false"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -9243,10 +9250,12 @@
       <MEMORYMAP>
         <MEMRANGE ADDRESSBLOCK="memaddr" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x07FFFFFF" INSTANCE="Memory_mig_7series_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x40000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4000FFFF" INSTANCE="AXI_LITE_IO_axi_gpio_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_LITE" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
+        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x40010000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4001FFFF" INSTANCE="AXI_LITE_IO_axi_gpio_1" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_LITE" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="Memory_mig_7series_0"/>
         <PERIPHERAL INSTANCE="AXI_LITE_IO_axi_gpio_0"/>
+        <PERIPHERAL INSTANCE="AXI_LITE_IO_axi_gpio_1"/>
       </PERIPHERALS>
     </MODULE>
   </MODULES>

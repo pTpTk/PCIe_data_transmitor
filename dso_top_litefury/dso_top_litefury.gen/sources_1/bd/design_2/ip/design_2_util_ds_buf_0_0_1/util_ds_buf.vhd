@@ -802,7 +802,7 @@ begin
          OBUFDS_GTME5_U :  OBUFDS_GTME5
 
         generic map (
-          REFCLK_EN_TX_PATH  => BIT1, --'0',
+          REFCLK_EN_TX_PATH  => BIT1_1, --'0',
           REFCLK_EN_DRV     => BIT1_1 
         )
         port map (
@@ -829,7 +829,7 @@ begin
          OBUFDS_GTME5_ADV_U : OBUFDS_GTME5_ADV
 
         generic map (
-          REFCLK_EN_TX_PATH  => BIT1, --'0',
+          REFCLK_EN_TX_PATH  => BIT1_1, --'0',
           REFCLK_EN_DRV       => BIT1_1
         )
         port map (

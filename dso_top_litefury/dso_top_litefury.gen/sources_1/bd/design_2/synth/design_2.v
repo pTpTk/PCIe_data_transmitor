@@ -1,8 +1,8 @@
-//Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+//Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-//Date        : Fri Aug  5 12:57:01 2022
-//Host        : DESKTOP-OPS50DH running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+//Date        : Wed Aug 10 17:19:29 2022
+//Host        : DESKTOP-DTL1MCC running 64-bit major release  (build 9200)
 //Command     : generate_target design_2.bd
 //Design      : design_2
 //Purpose     : IP block netlist

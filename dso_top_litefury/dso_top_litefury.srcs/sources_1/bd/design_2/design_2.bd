@@ -7,13 +7,13 @@
       "name": "design_2",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2021.2",
+      "tool_version": "2022.1",
       "validated": "true"
     },
     "design_tree": {
-      "clk_wiz_0": "",
       "util_ds_buf_0": "",
-      "util_ds_buf_1": ""
+      "util_ds_buf_1": "",
+      "clk_wiz_0": ""
     },
     "ports": {
       "ref_clk": {
@@ -75,6 +75,28 @@
       }
     },
     "components": {
+      "util_ds_buf_0": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "xci_name": "design_2_util_ds_buf_0_0",
+        "xci_path": "ip\\design_2_util_ds_buf_0_0_1\\design_2_util_ds_buf_0_0.xci",
+        "inst_hier_path": "util_ds_buf_0",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "BUFG"
+          }
+        }
+      },
+      "util_ds_buf_1": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "xci_name": "design_2_util_ds_buf_0_1",
+        "xci_path": "ip\\design_2_util_ds_buf_0_1_1\\design_2_util_ds_buf_0_1.xci",
+        "inst_hier_path": "util_ds_buf_1",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "BUFG"
+          }
+        }
+      },
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "design_2_clk_wiz_0_0",
@@ -95,28 +117,6 @@
           },
           "RESET_TYPE": {
             "value": "ACTIVE_LOW"
-          }
-        }
-      },
-      "util_ds_buf_0": {
-        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-        "xci_name": "design_2_util_ds_buf_0_0",
-        "xci_path": "ip\\design_2_util_ds_buf_0_0_1\\design_2_util_ds_buf_0_0.xci",
-        "inst_hier_path": "util_ds_buf_0",
-        "parameters": {
-          "C_BUF_TYPE": {
-            "value": "BUFG"
-          }
-        }
-      },
-      "util_ds_buf_1": {
-        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-        "xci_name": "design_2_util_ds_buf_0_1",
-        "xci_path": "ip\\design_2_util_ds_buf_0_1_1\\design_2_util_ds_buf_0_1.xci",
-        "inst_hier_path": "util_ds_buf_1",
-        "parameters": {
-          "C_BUF_TYPE": {
-            "value": "BUFG"
           }
         }
       }

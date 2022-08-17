@@ -62,7 +62,7 @@ design_1_axi_clock_converter_0_0_sc::design_1_axi_clock_converter_0_0_sc(const s
   // initialize module
     xsc::common_cpp::properties model_param_props;
     model_param_props.addLong("C_AXI_ID_WIDTH", "3");
-    model_param_props.addLong("C_AXI_ADDR_WIDTH", "32");
+    model_param_props.addLong("C_AXI_ADDR_WIDTH", "29");
     model_param_props.addLong("C_AXI_DATA_WIDTH", "128");
     model_param_props.addLong("C_S_AXI_ACLK_RATIO", "1");
     model_param_props.addLong("C_M_AXI_ACLK_RATIO", "2");

@@ -56,6 +56,7 @@ module dso_top
   wire sys_clk;
   
   wire fifo_empty;
+  wire fifo_rd_en;
   
   data_generator data_generator (
     .clk_ref(sys_clk),
@@ -77,7 +78,7 @@ module dso_top
   fifo_generator_0 adc_fifo (
     .rst(~S01_ARESETN | s2mm_halt),
     .din(adc_data),
-    .dout(fifo_data),
+    .dout(S_AXIS_S2MM_tdata),
     .wr_clk(adc_clk),
     .rd_clk(axi_aclk),
     .rd_en(fifo_rd_en),
@@ -93,7 +94,6 @@ module dso_top
     .axis_cmd_tdata(S_AXIS_S2MM_CMD_tdata),
     .axis_cmd_tvalid(S_AXIS_S2MM_CMD_tvalid),
     .axis_data_tready(S_AXIS_S2MM_tready),
-    .axis_data_tdata(S_AXIS_S2MM_tdata),
     .axis_data_tvalid(S_AXIS_S2MM_tvalid),
     .axis_data_tlast(S_AXIS_S2MM_tlast),
     .s2mm_err(s2mm_err),
@@ -101,7 +101,8 @@ module dso_top
     .s2mm_wr_xfer_cmplt(s2mm_wr_xfer_cmplt),
     .gpio_io_o_0(gpio_io_o_0),
     .gpio2_io_i(gpio2_io_i),
-    .fifo_empty(fifo_empty)
+    .fifo_empty(fifo_empty),
+    .fifo_rd_en(fifo_rd_en)
   );
   
   design_1 design_1_i

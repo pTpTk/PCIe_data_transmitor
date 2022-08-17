@@ -12,5 +12,3 @@ set_property BITSTREAM.CONFIG.M0PIN PULLNONE [current_design]
 set_property BITSTREAM.CONFIG.USR_ACCESS TIMESTAMP [current_design]
 
 set_property BITSTREAM.CONFIG.UNUSEDPIN PULLDOWN [current_design]
-
-

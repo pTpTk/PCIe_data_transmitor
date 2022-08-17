@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:axi_crossbar:2.1
-// IP Revision: 26
+// IP Revision: 27
 
 `timescale 1ns/1ps
 
@@ -304,7 +304,7 @@ HREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M00_AXI RREADY" *)
 output wire [0 : 0] m_axi_rready;
 
-  axi_crossbar_v2_1_26_axi_crossbar #(
+  axi_crossbar_v2_1_27_axi_crossbar #(
     .C_FAMILY("artix7"),
     .C_NUM_SLAVE_SLOTS(2),
     .C_NUM_MASTER_SLOTS(1),

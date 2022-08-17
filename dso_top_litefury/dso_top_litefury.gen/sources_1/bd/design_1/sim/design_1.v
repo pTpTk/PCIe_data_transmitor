@@ -1,8 +1,8 @@
-//Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+//Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-//Date        : Fri Aug  5 13:04:44 2022
-//Host        : DESKTOP-OPS50DH running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+//Date        : Thu Aug 11 12:36:45 2022
+//Host        : DESKTOP-DTL1MCC running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
@@ -586,7 +586,7 @@ module Memory_imp_BJ9R2P
   wire [1:1]S01_AXI_1_WREADY;
   wire [15:0]S01_AXI_1_WSTRB;
   wire S01_AXI_1_WVALID;
-  wire [31:0]axi_clock_converter_0_M_AXI_ARADDR;
+  wire [28:0]axi_clock_converter_0_M_AXI_ARADDR;
   wire [1:0]axi_clock_converter_0_M_AXI_ARBURST;
   wire [3:0]axi_clock_converter_0_M_AXI_ARCACHE;
   wire [2:0]axi_clock_converter_0_M_AXI_ARID;
@@ -597,7 +597,7 @@ module Memory_imp_BJ9R2P
   wire axi_clock_converter_0_M_AXI_ARREADY;
   wire [2:0]axi_clock_converter_0_M_AXI_ARSIZE;
   wire axi_clock_converter_0_M_AXI_ARVALID;
-  wire [31:0]axi_clock_converter_0_M_AXI_AWADDR;
+  wire [28:0]axi_clock_converter_0_M_AXI_AWADDR;
   wire [1:0]axi_clock_converter_0_M_AXI_AWBURST;
   wire [3:0]axi_clock_converter_0_M_AXI_AWCACHE;
   wire [2:0]axi_clock_converter_0_M_AXI_AWID;
@@ -791,7 +791,7 @@ module Memory_imp_BJ9R2P
         .m_axi_wstrb(axi_clock_converter_0_M_AXI_WSTRB),
         .m_axi_wvalid(axi_clock_converter_0_M_AXI_WVALID),
         .s_axi_aclk(xdma_0_axi_aclk),
-        .s_axi_araddr(axi_crossbar_0_M00_AXI_ARADDR),
+        .s_axi_araddr(axi_crossbar_0_M00_AXI_ARADDR[28:0]),
         .s_axi_arburst(axi_crossbar_0_M00_AXI_ARBURST),
         .s_axi_arcache(axi_crossbar_0_M00_AXI_ARCACHE),
         .s_axi_aresetn(S00_ARESETN_1),
@@ -804,7 +804,7 @@ module Memory_imp_BJ9R2P
         .s_axi_arregion(axi_crossbar_0_M00_AXI_ARREGION),
         .s_axi_arsize(axi_crossbar_0_M00_AXI_ARSIZE),
         .s_axi_arvalid(axi_crossbar_0_M00_AXI_ARVALID),
-        .s_axi_awaddr(axi_crossbar_0_M00_AXI_AWADDR),
+        .s_axi_awaddr(axi_crossbar_0_M00_AXI_AWADDR[28:0]),
         .s_axi_awburst(axi_crossbar_0_M00_AXI_AWBURST),
         .s_axi_awcache(axi_crossbar_0_M00_AXI_AWCACHE),
         .s_axi_awid(axi_crossbar_0_M00_AXI_AWID),
@@ -933,7 +933,7 @@ module Memory_imp_BJ9R2P
         .ddr3_ras_n(mig_7series_0_DDR3_RAS_N),
         .ddr3_reset_n(mig_7series_0_DDR3_RESET_N),
         .ddr3_we_n(mig_7series_0_DDR3_WE_N),
-        .s_axi_araddr(axi_clock_converter_0_M_AXI_ARADDR[28:0]),
+        .s_axi_araddr(axi_clock_converter_0_M_AXI_ARADDR),
         .s_axi_arburst(axi_clock_converter_0_M_AXI_ARBURST),
         .s_axi_arcache(axi_clock_converter_0_M_AXI_ARCACHE),
         .s_axi_arid(axi_clock_converter_0_M_AXI_ARID),
@@ -944,7 +944,7 @@ module Memory_imp_BJ9R2P
         .s_axi_arready(axi_clock_converter_0_M_AXI_ARREADY),
         .s_axi_arsize(axi_clock_converter_0_M_AXI_ARSIZE),
         .s_axi_arvalid(axi_clock_converter_0_M_AXI_ARVALID),
-        .s_axi_awaddr(axi_clock_converter_0_M_AXI_AWADDR[28:0]),
+        .s_axi_awaddr(axi_clock_converter_0_M_AXI_AWADDR),
         .s_axi_awburst(axi_clock_converter_0_M_AXI_AWBURST),
         .s_axi_awcache(axi_clock_converter_0_M_AXI_AWCACHE),
         .s_axi_awid(axi_clock_converter_0_M_AXI_AWID),
@@ -1374,10 +1374,10 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR3 RESET_N" *) output DDR3_reset_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR3 WE_N" *) output DDR3_we_n;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.S01_ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.S01_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input S01_ARESETN;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_CMD TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_S2MM_CMD, FREQ_HZ 125000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 9, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [71:0]S_AXIS_S2MM_CMD_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_CMD TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_S2MM_CMD, FREQ_HZ 125000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 9, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [71:0]S_AXIS_S2MM_CMD_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_CMD TREADY" *) output S_AXIS_S2MM_CMD_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_CMD TVALID" *) input S_AXIS_S2MM_CMD_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_S2MM, FREQ_HZ 125000000, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [127:0]S_AXIS_S2MM_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_S2MM, FREQ_HZ 125000000, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [127:0]S_AXIS_S2MM_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM TKEEP" *) input [15:0]S_AXIS_S2MM_tkeep;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM TLAST" *) input S_AXIS_S2MM_tlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM TREADY" *) output S_AXIS_S2MM_tready;
