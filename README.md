@@ -1,4 +1,25 @@
 # PCIe data transmitor
+
+## dso_top_litefury
+This is the main FPGA design (Currently not working because of the bug with the controls. And no I did not have any version control so there is no working version of the design anywhere). The block diagram of the design looks like this:![image](https://user-images.githubusercontent.com/51343090/185215547-8ac685cd-4bcc-4998-a3dc-47e93bcaa42e.png) The pdf of the schematics is in the dso folder for those who hasn't mastered microscopic vision yet.
+
+The data generator block is the temperary replacement for the actual adc channels. The input clk_ref is a 100MHz clock signal, the reset is active-low. The output clk is 80MHz.
+
+The adc_ctl block implements the vsync and hsync controls. This is the problematic block we have. The block functions like a clock divider. The issue is with the initialization. I wanted it to initalize through the AXI_Lite port, but it's not behaving as expected.
+
+The adc_fifo block buffers the incoming data and feeds the output into the datamover block in design_1. rd_clk is 125MHz, rd_en is high whenever data is available. rst is active-high. wr_en is from adc_ctl.
+
+The datamover_clt block ouputs the control signals used in datamover. I wanted to seperate the data path and the control components for a cleaner structure. Hence the adc_ctl and this module.
+
+The design_1 block is largely from Alex's design. The design looks like this:![Screenshot_L](https://user-images.githubusercontent.com/51343090/185234036-13743528-e00a-4822-bc62-336cb2c2ee45.png) Again the pdf file is available.
+* Datamover https://docs.xilinx.com/r/en-US/pg022_axi_datamover
+
+The datamover is an interface for AXI stream to AXI data transfer.
+* AXI_Lite_IO
+
+The control interface.
+
+
 ## AXI Operation Modes
 * Memory Mapped Protocols  
 &ensp;&ensp;&ensp;&ensp;In memory mapped AXI (AXI3, AXI4 and AXI4-Lite), all transactions involve the concept of a target address within a system memory space and data to be transferred.  
