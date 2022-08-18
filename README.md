@@ -66,7 +66,7 @@ SelectIO Interface Wizard provides a really simple way to interface LVDS signals
 The software for communicating with the FPGA board.
 * The CreateFile() syscall is used to create the device handle.
 * The SetFilePointerEx() syscall moves the pointer to desired location.
-* The base address of memory mapped components are set here.![image](https://user-images.githubusercontent.com/51343090/185429495-575a793a-a175-473a-930c-a8ac4e1b7f73.png)(No pdf for you this time) The two PCIe/xdma_0 mapped commponents are accessible from the PC side. After the device handle is created, the address is set to the base address. The M_AXI is called c2h0 and M_AXI_LITE is called user in the software. To access axi_gpio_1 the address needs to be increments accordingly. Although like I mentioned before, the functionality needs to be tested still.
+* The base address of memory mapped components are set here.![image](https://user-images.githubusercontent.com/51343090/185429495-575a793a-a175-473a-930c-a8ac4e1b7f73.png)(No pdf for you this time) The two PCIe/xdma_0 mapped commponents are accessible from the PC side. After the device handle is created, the address is set to the base address. The M_AXI is called c2h0 and M_AXI_LITE is called user in the software. To access axi_gpio_1 the address needs to be incremented accordingly. Although like I mentioned before, the functionality needs to be tested still.
 
 
 ## AXI Operation Modes
