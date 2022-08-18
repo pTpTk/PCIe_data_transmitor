@@ -1,0 +1,2 @@
+device path:	\\?\pci#ven_10ee&dev_7024&subsys_000710ee&rev_00#4&2c2694b5&0&00ec#{74c7e4a9-6d5d-4a70-bc0d-20691dff9e9d}
+device path:	\\?\pci#ven_10ee&dev_7024&subsys_000710ee&rev_00#4&2c2694b5&0&00ec#{74c7e4a9-6d5d-4a70-bc0d-20691dff9e9d}

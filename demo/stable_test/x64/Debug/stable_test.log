@@ -1,0 +1,22 @@
+﻿  stable_test.cpp
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(215,20): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'int64_t'
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(215,20): message : consider using '%lld' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(215,20): message : consider using '%Id' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(215,20): message : consider using '%I64d' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(215,20): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'int64_t'
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(215,20): message : consider using '%lld' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(215,20): message : consider using '%Id' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(215,20): message : consider using '%I64d' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(326,20): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(326,20): message : consider using '%zd' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(411,20): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'int64_t'
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(411,20): message : consider using '%lld' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(411,20): message : consider using '%Id' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(411,20): message : consider using '%I64d' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(411,20): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'int64_t'
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(411,20): message : consider using '%lld' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(411,20): message : consider using '%Id' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(411,20): message : consider using '%I64d' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(480,19): warning C4101: 'a': unreferenced local variable
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\stable_test\stable_test.cpp(480,22): warning C4101: 'b': unreferenced local variable
+  stable_test.vcxproj -> C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\x64\Debug\stable_test.exe

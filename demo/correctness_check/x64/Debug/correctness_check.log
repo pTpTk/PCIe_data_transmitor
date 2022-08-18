@@ -1,0 +1,12 @@
+﻿  check.cpp
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\correctness_check\check.cpp(78,20): warning C4477: 'printf' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 3 has type 'uint64_t'
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\correctness_check\check.cpp(78,20): message : consider using '%llx' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\correctness_check\check.cpp(78,20): message : consider using '%Ix' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\correctness_check\check.cpp(78,20): message : consider using '%I64x' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\correctness_check\check.cpp(78,20): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 4 has type 'uint64_t'
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\correctness_check\check.cpp(78,20): message : consider using '%lld' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\correctness_check\check.cpp(78,20): message : consider using '%Id' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\correctness_check\check.cpp(78,20): message : consider using '%I64d' in the format string
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\correctness_check\check.cpp(35,10): warning C4101: 'c': unreferenced local variable
+C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\correctness_check\check.cpp(34,10): warning C4101: 'ch': unreferenced local variable
+  correctness_check.vcxproj -> C:\Users\AnotherWorkstation\Desktop\xdma_driver_win_src_2018_2\x64\Debug\correctness_check.exe

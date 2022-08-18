@@ -1,0 +1,5 @@
+﻿  Building 'xdma_test' with toolset 'WindowsApplicationForDrivers10.0' and the 'Desktop' target platform.
+  xdma_test.cpp
+C:\Users\Petzval-PC\Documents\LiteFury\xdma_driver_win_src_2018_2\exe\xdma_test\xdma_test.cpp(221,18): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Petzval-PC\Documents\LiteFury\xdma_driver_win_src_2018_2\exe\xdma_test\xdma_test.cpp(227,18): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  xdma_test.vcxproj -> C:\Users\Petzval-PC\Documents\LiteFury\xdma_driver_win_src_2018_2\build\x64\bin\xdma_test.exe
