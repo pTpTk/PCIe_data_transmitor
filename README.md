@@ -48,7 +48,7 @@ The module interfaces with the PCIe lane hardware.
 Contrary to common beliefs, I did try to debug the program.
 ### adc_control
 
-I striped away everything except the sync control components.
+I striped away everything except the sync control components, did not work.
 ### clk_out
 
 I hardcoded the vsync and hsync counts, and the design works.
